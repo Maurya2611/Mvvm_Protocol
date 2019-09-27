@@ -17,6 +17,7 @@ Open `MVVM-Example.xcodeproj`, select desired target, build and run, enjoy!
 * [Natasha Murashev](https://www.natashatherobot.com/), ["Introduction to Protocol-Oriented MVVM"](https://realm.io/news/doios-natasha-murashev-protocol-oriented-mvvm/)
 * [Ash Furrow](http://artsy.github.io/), ["MVVM in Swift"](http://artsy.github.io/blog/2015/09/24/mvvm-in-swift/)
 * [objc.io](https://www.objc.io/), ["Intro to MVVM"](https://www.objc.io/issues/13-architecture/mvvm/)
+* [Mackis](https://github.com/Mackis/NetworkLayer), [https://medium.com/flawless-app-stories/writing-network-layer-in-swift-protocol-oriented-approach-4fa40ef1f908]
 
 ## Screenshots
 
