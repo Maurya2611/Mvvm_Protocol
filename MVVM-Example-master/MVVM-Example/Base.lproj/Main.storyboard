@@ -38,7 +38,7 @@
                                                         <action selector="onSwitchToggle:" destination="i7Q-Pj-ogk" eventType="valueChanged" id="fCW-qf-CPQ"/>
                                                     </connections>
                                                 </switch>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dineHeader" translatesAutoresizingMaskIntoConstraints="NO" id="men-th-PIF">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dineHeader" translatesAutoresizingMaskIntoConstraints="NO" id="men-th-PIF">
                                                     <rect key="frame" x="15" y="40" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="Hls-uK-8eb"/>

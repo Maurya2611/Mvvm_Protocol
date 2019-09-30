@@ -22,9 +22,7 @@ class MainBaseViewModel: TextPresentable, SwitchPresentable,
     func onSwitchToggle(onToggle: Bool) {
     }
     var reloadTable: () -> Void = { }
-    var imageName: String? {
-        return "dineHeader"
-    }
+    var imageName: String? = ""
     func reloadDataWithSucess() {
         startActivity()
         DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {

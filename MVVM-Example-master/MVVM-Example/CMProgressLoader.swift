@@ -12,7 +12,7 @@ public struct CMProgressLoader {
     public static var activityColor: UIColor = UIColor.red
     public static var activityBackgroundColor: UIColor = UIColor.clear
     public static var activityTextColor: UIColor = UIColor.black
-    public static var activityTextFontName: UIFont = UIFont.systemFont(ofSize: 14)
+    public static var activityFontName = UIFont(name: "CourierNewPS-BoldMT", size: 16.0)
     public static var activityWidth = 200 / 2
     public static var activityHeight = activityWidth
     public static var widthDivision: CGFloat = {
@@ -96,7 +96,7 @@ public struct CMProgressLoader {
         fileprivate func addTextLabel(_ yPosition: CGFloat, text: String) {
             textLabel = UILabel(frame: CGRect(x: 5, y: Int(yPosition - 10), width: activityWidth - 10, height: 40))
             textLabel.textColor = activityTextColor
-            textLabel.font = activityTextFontName
+            textLabel.font = activityFontName
             textLabel.adjustsFontSizeToFitWidth = true
             textLabel.minimumScaleFactor = 0.25
             textLabel.textAlignment = NSTextAlignment.center

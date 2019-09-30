@@ -29,7 +29,7 @@ class CustomTableViewCell: UITableViewCell {
         switchToggle.isOn = delegate.switchOn
         switchToggle.onTintColor = delegate.switchColor
         if let imageName = delegate.imageName {
-            imageV.image = UIImage(named: imageName)
+            imageV.loadImageUsingCache(withUrl: imageName)
         }
         switchToggle.isHidden = true
         lblSubTittle.isHidden = true

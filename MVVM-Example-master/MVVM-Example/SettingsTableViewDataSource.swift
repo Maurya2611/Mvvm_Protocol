@@ -15,6 +15,7 @@ extension SettingsTableViewDataSource: UITableViewDataSource {
             as? CustomTableViewCell
         viewModel.text = viewModel.baseDataModel?.creditCards?.itemList?[indexPath.row].title ?? ""
 //        viewModel.detailText = viewModel.baseDataModel?.creditCards?.itemList?[indexPath.row].title ?? ""
+        viewModel.imageName = viewModel.baseDataModel?.creditCards?.itemList?[indexPath.row].img
         cell?.configure(withDelegate: viewModel)
         return cell ?? UITableViewCell()
     }
