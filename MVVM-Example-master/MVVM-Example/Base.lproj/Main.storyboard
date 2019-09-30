@@ -25,37 +25,37 @@
                                 <rect key="frame" x="0.0" y="1" width="414" height="721"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomTableViewCell" rowHeight="90" id="i7Q-Pj-ogk" customClass="CustomTableViewCell" customModule="MVVM_Example" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomTableViewCell" rowHeight="120" id="i7Q-Pj-ogk" customClass="CustomTableViewCell" customModule="MVVM_Example" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i7Q-Pj-ogk" id="2lf-Pz-H1K">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="119.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CuE-Hb-x9R">
-                                                    <rect key="frame" x="357" y="29.5" width="51" height="31"/>
+                                                    <rect key="frame" x="357" y="44.5" width="51" height="31"/>
                                                     <connections>
                                                         <action selector="onSwitchToggle:" destination="i7Q-Pj-ogk" eventType="valueChanged" id="fCW-qf-CPQ"/>
                                                     </connections>
                                                 </switch>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dineHeader" translatesAutoresizingMaskIntoConstraints="NO" id="men-th-PIF">
-                                                    <rect key="frame" x="15" y="26" width="38" height="38"/>
+                                                    <rect key="frame" x="15" y="40" width="40" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="38" id="Hls-uK-8eb"/>
-                                                        <constraint firstAttribute="width" constant="38" id="gLG-s6-XLw"/>
+                                                        <constraint firstAttribute="height" constant="40" id="Hls-uK-8eb"/>
+                                                        <constraint firstAttribute="width" constant="40" id="gLG-s6-XLw"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Wcc-pJ-wwy">
-                                                    <rect key="frame" x="63" y="22" width="289" height="46"/>
+                                                    <rect key="frame" x="65" y="37" width="287" height="46"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trz-CN-y2g">
-                                                            <rect key="frame" x="0.0" y="0.0" width="289" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trz-CN-y2g">
+                                                            <rect key="frame" x="0.0" y="0.0" width="287" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igG-XG-LbZ">
-                                                            <rect key="frame" x="0.0" y="25.5" width="289" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="25.5" width="287" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>

@@ -32,6 +32,7 @@ class CustomTableViewCell: UITableViewCell {
             imageV.image = UIImage(named: imageName)
         }
         switchToggle.isHidden = true
+        lblSubTittle.isHidden = true
     }
     // MARK: Actions
     @IBAction func onSwitchToggle(_ sender: UISwitch) {
