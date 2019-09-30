@@ -21,7 +21,7 @@ struct BaseDataModel: Codable {
         case termsandconditions
     }
 }
-// MARK: BaseDataModel convenience initializers and mutators
+// MARK: BaseDataModel Convenience Initializers & Mutators
 extension BaseDataModel {
     init(data: Data) throws {
         self = try base_JSON_Decoder().decode(BaseDataModel.self, from: data)
@@ -70,7 +70,7 @@ struct CreditCards: Codable {
         case itemList
     }
 }
-// MARK: CreditCards convenience initializers and mutators
+// MARK: CreditCards Convenience Initializers & Mutators
 extension CreditCards {
     init(data: Data) throws {
         self = try base_JSON_Decoder().decode(CreditCards.self, from: data)
@@ -137,7 +137,7 @@ struct CreditCardsItemList: Codable {
         case promoCode = "promoCode"
     }
 }
-// MARK: CreditCardsItemList convenience initializers and mutators
+// MARK: CreditCardsItemList Convenience Initializers & Mutators
 extension CreditCardsItemList {
     init(data: Data) throws {
         self = try base_JSON_Decoder().decode(CreditCardsItemList.self, from: data)
@@ -225,7 +225,7 @@ struct Deposits: Codable {
         case itemList
     }
 }
-// MARK: Deposits convenience initializers and mutators
+// MARK: Deposits Convenience Initializers & Mutators
 extension Deposits {
     init(data: Data) throws {
         self = try base_JSON_Decoder().decode(Deposits.self, from: data)
@@ -278,7 +278,7 @@ struct DepositsItemList: Codable {
         case type = "type"
     }
 }
-// MARK: DepositsItemList convenience initializers and mutators
+// MARK: DepositsItemList Convenience Initializers & Mutators
 extension DepositsItemList {
     init(data: Data) throws {
         self = try base_JSON_Decoder().decode(DepositsItemList.self, from: data)
@@ -336,7 +336,7 @@ struct Termsandconditions: Codable {
         case desc2
     }
 }
-// MARK: Termsandconditions convenience initializers and mutators
+// MARK: Termsandconditions Convenience Initializers & Mutators
 extension Termsandconditions {
     init(data: Data) throws {
         self = try base_JSON_Decoder().decode(Termsandconditions.self, from: data)
@@ -370,7 +370,7 @@ extension Termsandconditions {
         return String(data: try self.jsonData(), encoding: encoding)
     }
 }
-// MARK: - Helper functions for creating encoders and decoders
+// MARK: - Helper functions for Creating Encoders & Decoders
 func base_JSON_Decoder() -> JSONDecoder {
     let decoder = JSONDecoder()
     if #available(iOS 10.0, OSX 10.12, tvOS 10.0, watchOS 3.0, *) {
