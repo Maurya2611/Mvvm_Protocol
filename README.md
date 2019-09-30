@@ -20,7 +20,3 @@ Open `MVVM-Example.xcodeproj`, select desired target, build and run, enjoy!
 * [Mackis](https://github.com/Mackis/NetworkLayer), 
 * [Medium](https://medium.com/flawless-app-stories/writing-network-layer-in-swift-protocol-oriented-approach-4fa40ef1f908),  ["writing-network-layer-in-swift-protocol-oriented-approach-4fa40ef1f908"]
 
-## Screenshots
-
-<img src="https://github.com/vanyaland/MVVM-Example/blob/master/resources/images/mvvm-example-minion.png"
-width="320" height="560">
