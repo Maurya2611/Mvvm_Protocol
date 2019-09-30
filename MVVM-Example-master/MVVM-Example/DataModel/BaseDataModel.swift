@@ -2,6 +2,7 @@
 //  MVVM-Example
 //  Created by Chandresh on 30/9/19.
 //  Copyright © 2019 Chandresh Maurya. All rights reserved.
+
 /******  To parse the JSON, add this file to your project and do:
  let baseDataModel = try BaseDataModel(json)    ******/
 
@@ -21,7 +22,7 @@ struct BaseDataModel: Codable {
         case termsandconditions
     }
 }
-// MARK: BaseDataModel Convenience Initializers & Mutators
+// MARK: - BaseDataModel Convenience Initializers & Mutators
 extension BaseDataModel {
     init(data: Data) throws {
         self = try base_JSON_Decoder().decode(BaseDataModel.self, from: data)
@@ -70,7 +71,7 @@ struct CreditCards: Codable {
         case itemList
     }
 }
-// MARK: CreditCards Convenience Initializers & Mutators
+// MARK: - CreditCards Convenience Initializers & Mutators
 extension CreditCards {
     init(data: Data) throws {
         self = try base_JSON_Decoder().decode(CreditCards.self, from: data)
@@ -104,7 +105,7 @@ extension CreditCards {
         return String(data: try self.jsonData(), encoding: encoding)
     }
 }
-// MARK: - CreditCardsItemList
+// MARK: - CreditCards ItemList
 struct CreditCardsItemList: Codable {
     let isInstantCard: Bool?
     let title: String?
@@ -137,7 +138,7 @@ struct CreditCardsItemList: Codable {
         case promoCode = "promoCode"
     }
 }
-// MARK: CreditCardsItemList Convenience Initializers & Mutators
+// MARK: - CreditCards Item List Convenience Initializers & Mutators
 extension CreditCardsItemList {
     init(data: Data) throws {
         self = try base_JSON_Decoder().decode(CreditCardsItemList.self, from: data)
@@ -225,7 +226,7 @@ struct Deposits: Codable {
         case itemList
     }
 }
-// MARK: Deposits Convenience Initializers & Mutators
+// MARK: - Deposits Convenience Initializers & Mutators
 extension Deposits {
     init(data: Data) throws {
         self = try base_JSON_Decoder().decode(Deposits.self, from: data)
@@ -278,7 +279,7 @@ struct DepositsItemList: Codable {
         case type = "type"
     }
 }
-// MARK: DepositsItemList Convenience Initializers & Mutators
+// MARK: - DepositsItemList Convenience Initializers & Mutators
 extension DepositsItemList {
     init(data: Data) throws {
         self = try base_JSON_Decoder().decode(DepositsItemList.self, from: data)
@@ -323,7 +324,7 @@ enum FluffyType: String, Codable {
     case insurance = "insurance"
     case loans = "loans"
 }
-// MARK: - Termsandconditions
+// MARK: - Terms & Conditions
 struct Termsandconditions: Codable {
     let title1: String?
     let desc1: String?
@@ -336,7 +337,7 @@ struct Termsandconditions: Codable {
         case desc2
     }
 }
-// MARK: Termsandconditions Convenience Initializers & Mutators
+// MARK: - Termsandconditions Convenience Initializers & Mutators
 extension Termsandconditions {
     init(data: Data) throws {
         self = try base_JSON_Decoder().decode(Termsandconditions.self, from: data)

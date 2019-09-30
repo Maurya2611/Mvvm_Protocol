@@ -41,6 +41,6 @@ class MainBaseViewModel: TextPresentable, SwitchPresentable,
         }
     }
     func startActivity() {
-     CMProgressLoader.showLoading("Loading •••", disableUI: true)
+      CMProgressLoader.showLoading("Loading •••", disableUI: true)
     }
 }

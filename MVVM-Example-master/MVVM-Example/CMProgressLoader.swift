@@ -7,7 +7,7 @@
 import UIKit
 import QuartzCore
 public struct CMProgressLoader {
-    public static var showFadeOutAnimation = false
+    public static var showFadeOutAnimation = true
     public static var pulseAnimation = true
     public static var activityColor: UIColor = UIColor.red
     public static var activityBackgroundColor: UIColor = UIColor.clear
@@ -15,25 +15,26 @@ public struct CMProgressLoader {
     public static var activityTextFontName: UIFont = UIFont.systemFont(ofSize: 14)
     public static var activityWidth = 200 / 2
     public static var activityHeight = activityWidth
-    public static var widthDivision: CGFloat {
-        get {
-            guard UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad else {
-                return 1.6
-            }
-            return 3.5
+    public static var widthDivision: CGFloat = {
+        guard UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad else {
+            return 1.6
         }
-    }
+        return 3.5
+    }()
     public static var viewBackgroundDark: Bool = false
     public static var loadOverApplicationWindow: Bool = false
     public static var instance: LoadingResource?
     public static var backgroundView: UIView!
     fileprivate static var hidingInProgress = false
+    // MARK: - Show Loading With Text....
     public static func showLoading(_ text: String, disableUI: Bool) {
         CMProgressLoader().startLoadingActivity(text, with: disableUI)
     }
+    // MARK: - Show Loading....
     public static func showLoading() {
         CMProgressLoader().startLoadingActivity("", with: false)
     }
+    // MARK: - Hide Loading....
     public static func hide() {
         DispatchQueue.main.async {
             instance?.hideActivity()
@@ -84,12 +85,14 @@ public struct CMProgressLoader {
                 self.layer.add(pulseAnimation, forKey: "animateOpacity")
             }
         }
+        // MARK: - Add Activity Indicator....
         fileprivate func addActivityView(_ yPosition: CGFloat) {
             activityView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.whiteLarge)
             activityView.frame = CGRect(x: (frame.width/2) - 20, y: yPosition - 10, width: 40, height: 40)
             activityView.color = activityColor
             activityView.startAnimating()
         }
+        // MARK: - Add Lable for Message....
         fileprivate func addTextLabel(_ yPosition: CGFloat, text: String) {
             textLabel = UILabel(frame: CGRect(x: 5, y: Int(yPosition - 10), width: activityWidth - 10, height: 40))
             textLabel.textColor = activityTextColor
@@ -207,24 +210,20 @@ fileprivate extension CMProgressLoader {
 }
 
 fileprivate extension UIScreen {
-    class var screenWidth: CGFloat {
-        get {
-            if UIInterfaceOrientation.portrait.isPortrait {
-                return UIScreen.main.bounds.size.width
-            } else {
-                return UIScreen.main.bounds.size.height
-            }
+    static var screenWidth: CGFloat = {
+        if UIInterfaceOrientation.portrait.isPortrait {
+            return UIScreen.main.bounds.size.width
+        } else {
+            return UIScreen.main.bounds.size.height
         }
-    }
-    class var screenHeight: CGFloat {
-        get {
-            if UIInterfaceOrientation.portrait.isPortrait {
-                return UIScreen.main.bounds.size.height
-            } else {
-                return UIScreen.main.bounds.size.width
-            }
+    }()
+    static var screenHeight: CGFloat = {
+        if UIInterfaceOrientation.portrait.isPortrait {
+            return UIScreen.main.bounds.size.height
+        } else {
+            return UIScreen.main.bounds.size.width
         }
-    }
+    }()
 }
 public var topMostViewController: UIViewController? {
     var presentedVC = UIApplication.shared.keyWindow?.rootViewController

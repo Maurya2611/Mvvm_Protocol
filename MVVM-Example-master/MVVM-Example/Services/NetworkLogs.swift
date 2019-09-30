@@ -3,7 +3,6 @@
 //
 //  Created by Chandresh on 30/9/19.
 //  Copyright © 2019 Chandresh Maurya. All rights reserved.
-//
 
 import Foundation
 class NetworkLogs {
