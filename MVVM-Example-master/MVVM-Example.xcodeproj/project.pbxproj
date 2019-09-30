@@ -50,6 +50,14 @@
 		75DAAD911D801BB100BAC0FE /* SwitchPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DAAD901D801BB100BAC0FE /* SwitchPresentable.swift */; };
 		7E8717B5269614A67D0BA08A /* Pods_MVVM_Greeting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B611549453E1C799F0FE6929 /* Pods_MVVM_Greeting.framework */; };
 		AEFBF5419290D8D4FD64F1BE /* Pods_MVVM_Generic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7573EB8E16072C3975E38841 /* Pods_MVVM_Generic.framework */; };
+		E005FE532341AC0A00F0855E /* NetworkRouterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E005FE4E2341AC0A00F0855E /* NetworkRouterType.swift */; };
+		E005FE542341AC0A00F0855E /* NetworkLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E005FE4F2341AC0A00F0855E /* NetworkLogs.swift */; };
+		E005FE552341AC0A00F0855E /* BaseNetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E005FE502341AC0A00F0855E /* BaseNetworkRouter.swift */; };
+		E005FE562341AC0A00F0855E /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E005FE512341AC0A00F0855E /* HTTPTask.swift */; };
+		E005FE572341AC0A00F0855E /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E005FE522341AC0A00F0855E /* HTTPMethod.swift */; };
+		E005FE5C2341AC3E00F0855E /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E005FE592341AC3E00F0855E /* ParameterEncoding.swift */; };
+		E005FE5D2341AC3E00F0855E /* URLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E005FE5A2341AC3E00F0855E /* URLParameterEncoding.swift */; };
+		E005FE5E2341AC3E00F0855E /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E005FE5B2341AC3E00F0855E /* JSONParameterEncoder.swift */; };
 		EB8DA077B303613DD560700C /* Pods_MVVM_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E62353D64E7C51C3DBA65D99 /* Pods_MVVM_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +112,14 @@
 		B611549453E1C799F0FE6929 /* Pods_MVVM_Greeting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_Greeting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7CCD526D65BC3890526E95C /* Pods-MVVM-Generic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-Generic.debug.xcconfig"; path = "Target Support Files/Pods-MVVM-Generic/Pods-MVVM-Generic.debug.xcconfig"; sourceTree = "<group>"; };
 		CDAD7884DB9DBAD37B34FBF7 /* Pods-MVVM-Generic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-Generic.release.xcconfig"; path = "Target Support Files/Pods-MVVM-Generic/Pods-MVVM-Generic.release.xcconfig"; sourceTree = "<group>"; };
+		E005FE4E2341AC0A00F0855E /* NetworkRouterType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRouterType.swift; sourceTree = "<group>"; };
+		E005FE4F2341AC0A00F0855E /* NetworkLogs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogs.swift; sourceTree = "<group>"; };
+		E005FE502341AC0A00F0855E /* BaseNetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNetworkRouter.swift; sourceTree = "<group>"; };
+		E005FE512341AC0A00F0855E /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		E005FE522341AC0A00F0855E /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		E005FE592341AC3E00F0855E /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		E005FE5A2341AC3E00F0855E /* URLParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoding.swift; sourceTree = "<group>"; };
+		E005FE5B2341AC3E00F0855E /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
 		E4EA2A890A6F0869D5E08472 /* Pods-MVVM-Greeting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-Greeting.release.xcconfig"; path = "Target Support Files/Pods-MVVM-Greeting/Pods-MVVM-Greeting.release.xcconfig"; sourceTree = "<group>"; };
 		E62353D64E7C51C3DBA65D99 /* Pods_MVVM_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -322,6 +338,7 @@
 				75DAAD6E1D800CDB00BAC0FE /* AppDelegate.swift */,
 				75DAAD821D800DBC00BAC0FE /* Controllers */,
 				75DAAD8B1D8017B100BAC0FE /* Model */,
+				E005FE4D2341ABD400F0855E /* Services */,
 				75DAAD881D80174800BAC0FE /* Protocols */,
 				75DAAD851D80124800BAC0FE /* View */,
 				75DAAD801D800D7A00BAC0FE /* Assets */,
@@ -384,6 +401,29 @@
 				75DAAD891D8017AA00BAC0FE /* MainBaseViewModel.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		E005FE4D2341ABD400F0855E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E005FE582341AC3E00F0855E /* Encoding */,
+				E005FE502341AC0A00F0855E /* BaseNetworkRouter.swift */,
+				E005FE522341AC0A00F0855E /* HTTPMethod.swift */,
+				E005FE512341AC0A00F0855E /* HTTPTask.swift */,
+				E005FE4F2341AC0A00F0855E /* NetworkLogs.swift */,
+				E005FE4E2341AC0A00F0855E /* NetworkRouterType.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E005FE582341AC3E00F0855E /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				E005FE592341AC3E00F0855E /* ParameterEncoding.swift */,
+				E005FE5A2341AC3E00F0855E /* URLParameterEncoding.swift */,
+				E005FE5B2341AC3E00F0855E /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -656,11 +696,19 @@
 				7525430D1D80577F00C457A1 /* ImagePresentable.swift in Sources */,
 				75DAAD911D801BB100BAC0FE /* SwitchPresentable.swift in Sources */,
 				75DAAD711D800CDB00BAC0FE /* SettingsViewController.swift in Sources */,
+				E005FE562341AC0A00F0855E /* HTTPTask.swift in Sources */,
+				E005FE5C2341AC3E00F0855E /* ParameterEncoding.swift in Sources */,
 				752543111D805DB100C457A1 /* CaseCountable.swift in Sources */,
 				75DAAD841D80124100BAC0FE /* CustomTableViewCell.swift in Sources */,
+				E005FE552341AC0A00F0855E /* BaseNetworkRouter.swift in Sources */,
 				75DAAD8D1D80192D00BAC0FE /* TextPresentable.swift in Sources */,
 				75DAAD8A1D8017AA00BAC0FE /* MainBaseViewModel.swift in Sources */,
+				E005FE572341AC0A00F0855E /* HTTPMethod.swift in Sources */,
 				75DAAD6F1D800CDB00BAC0FE /* AppDelegate.swift in Sources */,
+				E005FE532341AC0A00F0855E /* NetworkRouterType.swift in Sources */,
+				E005FE5D2341AC3E00F0855E /* URLParameterEncoding.swift in Sources */,
+				E005FE542341AC0A00F0855E /* NetworkLogs.swift in Sources */,
+				E005FE5E2341AC3E00F0855E /* JSONParameterEncoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
