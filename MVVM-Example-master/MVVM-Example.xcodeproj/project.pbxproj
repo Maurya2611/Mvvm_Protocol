@@ -61,6 +61,7 @@
 		E005FE642341B68600F0855E /* BaseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E005FE632341B68600F0855E /* BaseDataModel.swift */; };
 		E005FE662341D25100F0855E /* BaseURLWithRouterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E005FE652341D25100F0855E /* BaseURLWithRouterType.swift */; };
 		E005FE682341D2BE00F0855E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E005FE672341D2BE00F0855E /* NetworkManager.swift */; };
+		E005FE6C2341F8F200F0855E /* CMProgressLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E005FE6B2341F8F200F0855E /* CMProgressLoader.swift */; };
 		EB8DA077B303613DD560700C /* Pods_MVVM_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E62353D64E7C51C3DBA65D99 /* Pods_MVVM_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +127,7 @@
 		E005FE632341B68600F0855E /* BaseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDataModel.swift; sourceTree = "<group>"; };
 		E005FE652341D25100F0855E /* BaseURLWithRouterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURLWithRouterType.swift; sourceTree = "<group>"; };
 		E005FE672341D2BE00F0855E /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E005FE6B2341F8F200F0855E /* CMProgressLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMProgressLoader.swift; sourceTree = "<group>"; };
 		E4EA2A890A6F0869D5E08472 /* Pods-MVVM-Greeting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-Greeting.release.xcconfig"; path = "Target Support Files/Pods-MVVM-Greeting/Pods-MVVM-Greeting.release.xcconfig"; sourceTree = "<group>"; };
 		E62353D64E7C51C3DBA65D99 /* Pods_MVVM_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -384,6 +386,7 @@
 		75DAAD851D80124800BAC0FE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E005FE6B2341F8F200F0855E /* CMProgressLoader.swift */,
 				75DAAD831D80124100BAC0FE /* CustomTableViewCell.swift */,
 			);
 			name = View;
@@ -708,6 +711,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E005FE642341B68600F0855E /* BaseDataModel.swift in Sources */,
+				E005FE6C2341F8F200F0855E /* CMProgressLoader.swift in Sources */,
 				7525430F1D805A5100C457A1 /* SettingsTableViewDataSource.swift in Sources */,
 				75B8CBEA1D81552100EC3062 /* DetailTextPresentable.swift in Sources */,
 				75DAAD871D80172D00BAC0FE /* CellReuseIdentifierlabel.swift in Sources */,

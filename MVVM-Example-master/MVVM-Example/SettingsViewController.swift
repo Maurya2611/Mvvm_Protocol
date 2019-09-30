@@ -7,11 +7,20 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+        tableViewDataSource.viewModel.reloadDataWithSucess()
+        self.observeEvents()
     }
     private func configure() {
         tableView.dataSource = tableViewDataSource
         tableView.delegate = self
         tableView.backgroundColor = UIColor.init(red: 243.0/255.0, green: 228.0/255.0, blue: 200.0/255.0, alpha: 1.0)
+    }
+    private func observeEvents() {
+         tableViewDataSource.viewModel.reloadTable = { [weak self] in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }
     }
 }
 

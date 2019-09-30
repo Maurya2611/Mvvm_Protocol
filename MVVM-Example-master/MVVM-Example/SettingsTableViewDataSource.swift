@@ -7,14 +7,14 @@ class SettingsTableViewDataSource: NSObject {
 }
 extension SettingsTableViewDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 15
+        return viewModel.baseDataModel?.deposits?.itemList?.count ?? 0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(
             withIdentifier: CustomTableViewCell.reuseIdentifier)
             as? CustomTableViewCell
-        viewModel.text = "Header Tittle: - \(indexPath.row + 1)"
-        viewModel.detailText = "Sub Tittle: - \(indexPath.row + 1)"
+        viewModel.text = viewModel.baseDataModel?.deposits?.itemList?[indexPath.row].title ?? ""
+        viewModel.detailText = viewModel.baseDataModel?.creditCards?.itemList?[indexPath.row].title ?? ""
         cell?.configure(withDelegate: viewModel)
         return cell ?? UITableViewCell()
     }

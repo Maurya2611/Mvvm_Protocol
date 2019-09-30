@@ -1,3 +1,9 @@
+//  CustomTableViewCell.swift
+//  MVVM-Example
+//
+//  Created by Chandresh on 30/9/19.
+//  Copyright © 2019 Chandresh Maurya. All rights reserved.
+//
 import UIKit
 typealias BaseViewDataPresentable = TextPresentable &
     SwitchPresentable &
@@ -25,7 +31,7 @@ class CustomTableViewCell: UITableViewCell {
         if let imageName = delegate.imageName {
             imageV.image = UIImage(named: imageName)
         }
-        switchToggle.isHidden = false
+        switchToggle.isHidden = true
     }
     // MARK: Actions
     @IBAction func onSwitchToggle(_ sender: UISwitch) {

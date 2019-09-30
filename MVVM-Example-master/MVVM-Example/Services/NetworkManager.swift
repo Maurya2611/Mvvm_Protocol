@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 enum NetworkResponse: String {
     case success
     case authenticationError = "You need to be authenticated first."
@@ -17,12 +16,10 @@ enum NetworkResponse: String {
     case noData = "Response returned with no data to decode."
     case unableToDecode = "We could not decode the response."
 }
-
 enum Result<String> {
     case success
     case failure(String)
 }
-
 struct NetworkManager {
     static let environment: NetworkEnvironment = .production
     static let MovieAPIKey = ""
@@ -42,9 +39,7 @@ struct NetworkManager {
                     }
                     do {
                         print(responseData)
-                        let jsonData = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers)
-                        print(jsonData)
-                        let apiResponse = try JSONDecoder().decode(BaseDataModel.self, from: responseData)
+                        let apiResponse = try BaseDataModel.init(data: responseData)
                         completion(apiResponse, nil)
                     } catch {
                         print(error)
