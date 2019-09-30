@@ -7,6 +7,7 @@
 import UIKit
 class MainBaseViewModel: TextPresentable, SwitchPresentable, ImagePresentable, DetailTextPresentable {
     var detailText: String = ""
+    var networkManager: NetworkManager!
     var text: String = ""
     var textColor: UIColor { return .black }
     var font: UIFont { return UIFont(name: "CourierNewPS-BoldMT", size: 16.0) ?? .systemFont(ofSize: 16.0) }
@@ -14,9 +15,17 @@ class MainBaseViewModel: TextPresentable, SwitchPresentable, ImagePresentable, D
     var switchColor: UIColor { return .yellow }
     func onSwitchToggle(onToggle: Bool) {
         if onToggle {
-            print("The colorModes are here to stay!!!")
+            networkManager.getApplyProductsWithData { (dataModel, error) in
+                if let serverError = error, !serverError.isEmpty {
+                    DispatchQueue.main.async {
+                        //self.lblmessage?.text = String(format: "%@", serverError.description.capitalized)
+                        print(dataModel?.deposits ?? "")
+                    }
+                } else {
+                    print(dataModel?.deposits ?? "")
+                }
+            }
         } else {
-            print("The colorModes went out to play!")
         }
     }
     var imageName: String? {

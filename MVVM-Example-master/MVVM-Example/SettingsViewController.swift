@@ -3,7 +3,7 @@ class SettingsViewController: UIViewController {
     // MARK: Variables
     @IBOutlet weak var tableView: UITableView!
     // MARK: Life Cycle
-    private let tableViewDataSource = SettingsTableViewDataSource()
+    private let tableViewDataSource = SettingsTableViewDataSource(networkManager: NetworkManager())
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()

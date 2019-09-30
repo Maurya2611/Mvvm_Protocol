@@ -1,6 +1,9 @@
 import UIKit
 class SettingsTableViewDataSource: NSObject {
     var viewModel: MainBaseViewModel = MainBaseViewModel()
+    init(networkManager: NetworkManager) {
+        viewModel.networkManager = networkManager
+    }
 }
 extension SettingsTableViewDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -1,8 +1,8 @@
 import UIKit
-typealias SwitchTextImageViewPresentable = TextPresentable &
+typealias BaseViewDataPresentable = TextPresentable &
     SwitchPresentable &
     ImagePresentable &
-    DetailTextPresentable
+DetailTextPresentable
 /* MARK: - SwitchWithTextTableViewCell: UITableViewCell */
 class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var lblTittle: UILabel!
@@ -10,9 +10,9 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var switchToggle: UISwitch!
     @IBOutlet weak var imageV: UIImageView!
     /* Mark: Private Variables */
-    private var delegate: SwitchTextImageViewPresentable?
+    private var delegate: BaseViewDataPresentable?
     /* Mark: Public Variables */
-    func configure(withDelegate delegate: SwitchTextImageViewPresentable) {
+    func configure(withDelegate delegate: BaseViewDataPresentable) {
         self.delegate = delegate
         backgroundColor = .clear
         lblTittle.text = delegate.text
@@ -25,7 +25,7 @@ class CustomTableViewCell: UITableViewCell {
         if let imageName = delegate.imageName {
             imageV.image = UIImage(named: imageName)
         }
-        switchToggle.isHidden = true
+        switchToggle.isHidden = false
     }
     // MARK: Actions
     @IBAction func onSwitchToggle(_ sender: UISwitch) {
