@@ -43,9 +43,9 @@
 		75DAAD741D800CDB00BAC0FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75DAAD721D800CDB00BAC0FE /* Main.storyboard */; };
 		75DAAD761D800CDB00BAC0FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75DAAD751D800CDB00BAC0FE /* Assets.xcassets */; };
 		75DAAD791D800CDB00BAC0FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75DAAD771D800CDB00BAC0FE /* LaunchScreen.storyboard */; };
-		75DAAD841D80124100BAC0FE /* SwitchWithTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DAAD831D80124100BAC0FE /* SwitchWithTextTableViewCell.swift */; };
+		75DAAD841D80124100BAC0FE /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DAAD831D80124100BAC0FE /* CustomTableViewCell.swift */; };
 		75DAAD871D80172D00BAC0FE /* CellReuseIdentifierlabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DAAD861D80172D00BAC0FE /* CellReuseIdentifierlabel.swift */; };
-		75DAAD8A1D8017AA00BAC0FE /* MinionModeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DAAD891D8017AA00BAC0FE /* MinionModeViewModel.swift */; };
+		75DAAD8A1D8017AA00BAC0FE /* MainBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DAAD891D8017AA00BAC0FE /* MainBaseViewModel.swift */; };
 		75DAAD8D1D80192D00BAC0FE /* TextPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DAAD8C1D80192D00BAC0FE /* TextPresentable.swift */; };
 		75DAAD911D801BB100BAC0FE /* SwitchPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DAAD901D801BB100BAC0FE /* SwitchPresentable.swift */; };
 		7E8717B5269614A67D0BA08A /* Pods_MVVM_Greeting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B611549453E1C799F0FE6929 /* Pods_MVVM_Greeting.framework */; };
@@ -95,9 +95,9 @@
 		75DAAD751D800CDB00BAC0FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75DAAD781D800CDB00BAC0FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75DAAD7A1D800CDB00BAC0FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		75DAAD831D80124100BAC0FE /* SwitchWithTextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchWithTextTableViewCell.swift; sourceTree = "<group>"; };
+		75DAAD831D80124100BAC0FE /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		75DAAD861D80172D00BAC0FE /* CellReuseIdentifierlabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellReuseIdentifierlabel.swift; sourceTree = "<group>"; };
-		75DAAD891D8017AA00BAC0FE /* MinionModeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinionModeViewModel.swift; sourceTree = "<group>"; };
+		75DAAD891D8017AA00BAC0FE /* MainBaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainBaseViewModel.swift; sourceTree = "<group>"; };
 		75DAAD8C1D80192D00BAC0FE /* TextPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextPresentable.swift; sourceTree = "<group>"; };
 		75DAAD901D801BB100BAC0FE /* SwitchPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchPresentable.swift; sourceTree = "<group>"; };
 		AC44784F117743AB599D9DC5 /* Pods-MVVM-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-Example.debug.xcconfig"; path = "Target Support Files/Pods-MVVM-Example/Pods-MVVM-Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -360,7 +360,7 @@
 		75DAAD851D80124800BAC0FE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				75DAAD831D80124100BAC0FE /* SwitchWithTextTableViewCell.swift */,
+				75DAAD831D80124100BAC0FE /* CustomTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -381,7 +381,7 @@
 		75DAAD8B1D8017B100BAC0FE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				75DAAD891D8017AA00BAC0FE /* MinionModeViewModel.swift */,
+				75DAAD891D8017AA00BAC0FE /* MainBaseViewModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -657,9 +657,9 @@
 				75DAAD911D801BB100BAC0FE /* SwitchPresentable.swift in Sources */,
 				75DAAD711D800CDB00BAC0FE /* SettingsViewController.swift in Sources */,
 				752543111D805DB100C457A1 /* CaseCountable.swift in Sources */,
-				75DAAD841D80124100BAC0FE /* SwitchWithTextTableViewCell.swift in Sources */,
+				75DAAD841D80124100BAC0FE /* CustomTableViewCell.swift in Sources */,
 				75DAAD8D1D80192D00BAC0FE /* TextPresentable.swift in Sources */,
-				75DAAD8A1D8017AA00BAC0FE /* MinionModeViewModel.swift in Sources */,
+				75DAAD8A1D8017AA00BAC0FE /* MainBaseViewModel.swift in Sources */,
 				75DAAD6F1D800CDB00BAC0FE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

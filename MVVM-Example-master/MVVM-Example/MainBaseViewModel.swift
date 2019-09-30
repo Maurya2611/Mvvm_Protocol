@@ -1,5 +1,5 @@
 import UIKit
-class MinionModeViewModel: TextPresentable, SwitchPresentable, ImagePresentable, DetailTextPresentable {
+class MainBaseViewModel: TextPresentable, SwitchPresentable, ImagePresentable, DetailTextPresentable {
     var detailText: String = ""
     var text: String = ""
     var textColor: UIColor { return .black }
@@ -17,12 +17,3 @@ class MinionModeViewModel: TextPresentable, SwitchPresentable, ImagePresentable,
         return "dineHeader"
     }
 }
-//// MARK: MinionModeViewModel: TextPresentable
-//extension MinionModeViewModel: TextPresentable {
-//}
-//// MARK: MinionModeViewModel: SwitchPresentable
-//extension MinionModeViewModel: SwitchPresentable {
-//}
-//// MARK: MinionModeViewModel: ImagePresentable
-//extension MinionModeViewModel: ImagePresentable {
-//}

@@ -4,7 +4,7 @@ typealias SwitchTextImageViewPresentable = TextPresentable &
     ImagePresentable &
     DetailTextPresentable
 /* MARK: - SwitchWithTextTableViewCell: UITableViewCell */
-class SwitchWithTextTableViewCell: UITableViewCell {
+class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var lblTittle: UILabel!
     @IBOutlet weak var lblSubTittle: UILabel!
     @IBOutlet weak var switchToggle: UISwitch!
@@ -33,5 +33,5 @@ class SwitchWithTextTableViewCell: UITableViewCell {
     }
 }
 // MARK: - SwitchWithTextTableViewCell: CellReuseIdentifierlabel -
-extension SwitchWithTextTableViewCell: CellReuseIdentifierabel {
+extension CustomTableViewCell: CellReuseIdentifierabel {
 }

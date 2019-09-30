@@ -1,6 +1,6 @@
 import UIKit
 class SettingsTableViewDataSource: NSObject {
-    var viewModel: MinionModeViewModel = MinionModeViewModel()
+    var viewModel: MainBaseViewModel = MainBaseViewModel()
 }
 extension SettingsTableViewDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -8,8 +8,8 @@ extension SettingsTableViewDataSource: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(
-            withIdentifier: SwitchWithTextTableViewCell.reuseIdentifier)
-            as? SwitchWithTextTableViewCell
+            withIdentifier: CustomTableViewCell.reuseIdentifier)
+            as? CustomTableViewCell
         viewModel.text = "Header Tittle: - \(indexPath.row + 1)"
         viewModel.detailText = "Sub Tittle: - \(indexPath.row + 1)"
         cell?.configure(withDelegate: viewModel)
