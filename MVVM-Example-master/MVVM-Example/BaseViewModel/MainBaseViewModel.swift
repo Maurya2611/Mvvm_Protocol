@@ -9,18 +9,13 @@ import UIKit
 protocol reloadDataWithCollectionView {
     func reloadDataWithSucess()
 }
-class MainBaseViewModel: TextPresentable, SwitchPresentable,
-    ImagePresentable, DetailTextPresentable {
+class MainBaseViewModel: TextPresentable, ImagePresentable, DetailTextPresentable {
     var detailText: String = ""
     var networkManager: NetworkManager!
     var baseDataModel: BaseDataModel?
     var text: String = ""
     var textColor: UIColor { return .black }
     var font: UIFont { return UIFont(name: "CourierNewPS-BoldMT", size: 16.0) ?? .systemFont(ofSize: 16.0) }
-    var switchOn: Bool { return true }
-    var switchColor: UIColor { return .yellow }
-    func onSwitchToggle(onToggle: Bool) {
-    }
     var reloadTable: () -> Void = { }
     var imageName: String? = ""
     

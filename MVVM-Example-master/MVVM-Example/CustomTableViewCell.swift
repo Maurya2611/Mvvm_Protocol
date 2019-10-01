@@ -6,14 +6,11 @@
 //
 import UIKit
 typealias BaseViewDataPresentable = TextPresentable &
-    SwitchPresentable &
-    ImagePresentable &
-DetailTextPresentable
+    ImagePresentable & DetailTextPresentable
 /* MARK: - SwitchWithTextTableViewCell: UITableViewCell */
 class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var lblTittle: UILabel!
     @IBOutlet weak var lblSubTittle: UILabel!
-    @IBOutlet weak var switchToggle: UISwitch!
     @IBOutlet weak var imageV: UIImageView!
     /* Mark: Private Variables */
     private var delegate: BaseViewDataPresentable?
@@ -26,18 +23,13 @@ class CustomTableViewCell: UITableViewCell {
         lblTittle.font = delegate.font
         lblSubTittle.text = delegate.detailText
         lblSubTittle.font = delegate.detailFont
-        switchToggle.isOn = delegate.switchOn
-        switchToggle.onTintColor = delegate.switchColor
         if let imageName = delegate.imageName {
             imageV.loadImageUsingCache(withUrl: imageName)
         }
-        switchToggle.isHidden = true
         lblSubTittle.isHidden = true
     }
     // MARK: Actions
-    @IBAction func onSwitchToggle(_ sender: UISwitch) {
-        delegate?.onSwitchToggle(onToggle: sender.isOn)
-    }
+   
 }
 // MARK: - SwitchWithTextTableViewCell: CellReuseIdentifierlabel -
 extension CustomTableViewCell: CellReuseIdentifierabel {

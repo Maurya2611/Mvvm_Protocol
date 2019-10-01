@@ -56,7 +56,6 @@
 		E005FE752342F7E100F0855E /* DetailTextPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E005FE6F2342F7E100F0855E /* DetailTextPresentable.swift */; };
 		E005FE762342F7E100F0855E /* CaseCountable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E005FE702342F7E100F0855E /* CaseCountable.swift */; };
 		E005FE772342F7E100F0855E /* TextPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E005FE712342F7E100F0855E /* TextPresentable.swift */; };
-		E005FE782342F7E100F0855E /* SwitchPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E005FE722342F7E100F0855E /* SwitchPresentable.swift */; };
 		E005FE792342F7E100F0855E /* CellReuseIdentifierlabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E005FE732342F7E100F0855E /* CellReuseIdentifierlabel.swift */; };
 		E005FE7B2342F82200F0855E /* ApplyProductProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E005FE7A2342F82200F0855E /* ApplyProductProtocol.swift */; };
 		EB8DA077B303613DD560700C /* Pods_MVVM_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E62353D64E7C51C3DBA65D99 /* Pods_MVVM_Example.framework */; };
@@ -123,7 +122,6 @@
 		E005FE6F2342F7E100F0855E /* DetailTextPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTextPresentable.swift; sourceTree = "<group>"; };
 		E005FE702342F7E100F0855E /* CaseCountable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseCountable.swift; sourceTree = "<group>"; };
 		E005FE712342F7E100F0855E /* TextPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextPresentable.swift; sourceTree = "<group>"; };
-		E005FE722342F7E100F0855E /* SwitchPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchPresentable.swift; sourceTree = "<group>"; };
 		E005FE732342F7E100F0855E /* CellReuseIdentifierlabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellReuseIdentifierlabel.swift; sourceTree = "<group>"; };
 		E005FE7A2342F82200F0855E /* ApplyProductProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyProductProtocol.swift; sourceTree = "<group>"; };
 		E4EA2A890A6F0869D5E08472 /* Pods-MVVM-Greeting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-Greeting.release.xcconfig"; path = "Target Support Files/Pods-MVVM-Greeting/Pods-MVVM-Greeting.release.xcconfig"; sourceTree = "<group>"; };
@@ -438,7 +436,6 @@
 				E005FE6F2342F7E100F0855E /* DetailTextPresentable.swift */,
 				E005FE702342F7E100F0855E /* CaseCountable.swift */,
 				E005FE712342F7E100F0855E /* TextPresentable.swift */,
-				E005FE722342F7E100F0855E /* SwitchPresentable.swift */,
 				E005FE732342F7E100F0855E /* CellReuseIdentifierlabel.swift */,
 				E005FE7A2342F82200F0855E /* ApplyProductProtocol.swift */,
 			);
@@ -726,7 +723,6 @@
 				E005FE762342F7E100F0855E /* CaseCountable.swift in Sources */,
 				E005FE5D2341AC3E00F0855E /* URLParameterEncoding.swift in Sources */,
 				E005FE742342F7E100F0855E /* ImagePresentable.swift in Sources */,
-				E005FE782342F7E100F0855E /* SwitchPresentable.swift in Sources */,
 				E005FE542341AC0A00F0855E /* NetworkLogs.swift in Sources */,
 				E005FE5E2341AC3E00F0855E /* JSONParameterEncoder.swift in Sources */,
 			);
