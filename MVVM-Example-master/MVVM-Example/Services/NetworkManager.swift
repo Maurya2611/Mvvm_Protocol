@@ -84,12 +84,12 @@ extension UIImageView {
                                         print(error!)
                                         return
                                     }
-                                    DispatchQueue.main.async {
-                                        if let image = UIImage(data: data!) {
-                                            imageCache.setObject(image, forKey: urlString as NSString)
-                                            self.image = image
-                                        }
-                                    }
+            DispatchQueue.main.async {
+                if let image = UIImage(data: data!) {
+                    imageCache.setObject(image, forKey: urlString as NSString)
+                    self.image = image
+                }
+            }
         }).resume()
     }
 }

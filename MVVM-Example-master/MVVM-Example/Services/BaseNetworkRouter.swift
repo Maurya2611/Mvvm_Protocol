@@ -43,9 +43,9 @@ class BaseNetworkRouter<EndPoint: NetworkRouterType>: NetworkRouter {
             case .requestParameters(let bodyParameters,
                                     let bodyEncoding,
                                     let urlParameters): try self.configureParameters(bodyParameters: bodyParameters,
-                                                                                     bodyEncoding: bodyEncoding,
-                                                                                     urlParameters: urlParameters,
-                                                                                     request: &request)
+                                        bodyEncoding: bodyEncoding,
+                                        urlParameters: urlParameters,
+                                        request: &request)
             case .requestParametersWithHeaders(let bodyParameters,
                                                let bodyEncoding,
                                                let urlParameters,
