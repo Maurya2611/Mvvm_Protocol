@@ -1,5 +1,4 @@
-# Mvvm_Protocol
-# MVVM-Example
+# Mvvm_Protocol_Example
 
 [![codebeat badge](https://codebeat.co/badges/75daa704-de95-4880-8f95-c3a6812e7429)](https://codebeat.co/projects/github-com-vanyaland-mvvm-example-master)
 
