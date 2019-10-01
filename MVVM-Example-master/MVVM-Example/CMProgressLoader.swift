@@ -12,7 +12,7 @@ public struct CMProgressLoader {
     public static var activityColor: UIColor = UIColor.red
     public static var activityBackgroundColor: UIColor = UIColor.clear
     public static var activityTextColor: UIColor = UIColor.black
-    public static var activityFontName = UIFont(name: "CourierNewPS-BoldMT", size: 16.0)
+    public static var activityFontName = UIFont(name: "CourierNewPS-BoldMT", size: 18.0)
     public static var activityWidth = 200 / 2
     public static var activityHeight = activityWidth
     public static var widthDivision: CGFloat = {
@@ -76,7 +76,7 @@ public struct CMProgressLoader {
             }
             DispatchQueue.main.async {
                 let pulseAnimation = CABasicAnimation(keyPath: #keyPath(CALayer.opacity))
-                pulseAnimation.duration = 0.4
+                pulseAnimation.duration = 1.0
                 pulseAnimation.fromValue = 0.8
                 pulseAnimation.toValue = 1
                 pulseAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
@@ -88,7 +88,7 @@ public struct CMProgressLoader {
         // MARK: - Add Activity Indicator....
         fileprivate func addActivityView(_ yPosition: CGFloat) {
             activityView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.whiteLarge)
-            activityView.frame = CGRect(x: (frame.width/2) - 20, y: yPosition - 10, width: 40, height: 40)
+            activityView.frame = CGRect(x: (frame.width/2) - 20, y: yPosition - 10, width: 35, height: 35)
             activityView.color = activityColor
             activityView.startAnimating()
         }
@@ -98,7 +98,7 @@ public struct CMProgressLoader {
             textLabel.textColor = activityTextColor
             textLabel.font = activityFontName
             textLabel.adjustsFontSizeToFitWidth = true
-            textLabel.minimumScaleFactor = 0.25
+            textLabel.minimumScaleFactor = 0.50
             textLabel.textAlignment = NSTextAlignment.center
             textLabel.text = text
         }
@@ -111,7 +111,7 @@ public struct CMProgressLoader {
             }
             UIApplication.shared.windows.first?.addSubview(self)
         }
-        fileprivate var fadeOutValue: CGFloat = 10.0
+        fileprivate var fadeOutValue: CGFloat = 5.0
         fileprivate func hideActivity() {
             checkBackgoundWasClear()
             guard showFadeOutAnimation else {
@@ -122,7 +122,7 @@ public struct CMProgressLoader {
         }
         fileprivate func fadeOutAnimation() {
             DispatchQueue.main.async {
-                UIView.transition(with: self, duration: 0.3, options: .curveEaseOut, animations: {
+                UIView.transition(with: self, duration: 0.50, options: .curveEaseInOut, animations: {
                     self.transform = CGAffineTransform(scaleX: self.fadeOutValue, y: self.fadeOutValue)
                     self.alpha = 0.2
                 }, completion: { (_) in

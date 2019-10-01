@@ -10,7 +10,7 @@ protocol reloadDataWithCollectionView {
     func reloadDataWithSucess()
 }
 class MainBaseViewModel: TextPresentable, SwitchPresentable,
-    ImagePresentable, DetailTextPresentable, reloadDataWithCollectionView {
+    ImagePresentable, DetailTextPresentable {
     var detailText: String = ""
     var networkManager: NetworkManager!
     var baseDataModel: BaseDataModel?
@@ -23,6 +23,9 @@ class MainBaseViewModel: TextPresentable, SwitchPresentable,
     }
     var reloadTable: () -> Void = { }
     var imageName: String? = ""
+    
+}
+extension MainBaseViewModel: reloadDataWithCollectionView {
     func reloadDataWithSucess() {
         startActivity()
         DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
@@ -39,6 +42,6 @@ class MainBaseViewModel: TextPresentable, SwitchPresentable,
         }
     }
     func startActivity() {
-      CMProgressLoader.showLoading("Loading •••", disableUI: true)
+        CMProgressLoader.showLoading("Loading •••", disableUI: true)
     }
 }
