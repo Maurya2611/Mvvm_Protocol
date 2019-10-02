@@ -65,31 +65,31 @@ struct NetworkManager {
 let imageCache = NSCache<NSString, AnyObject>()
 extension UIImageView {
     func loadImageUsingCache(withUrl urlString: String) {
-        let url = URL(string: urlString)
-        
-        DispatchQueue.main.async {
-            self.image = nil
-        }
-        // check cached image
-        if let cachedImage = imageCache.object(forKey: urlString as NSString) as? UIImage {
+        if let url = URL(string: urlString) {
             DispatchQueue.main.async {
-                self.image = cachedImage
+                self.image = nil
             }
-            return
-        }
-        // if not, download image from url
-        URLSession.shared.dataTask(with: url!,
-                                   completionHandler: { (data, _, error) in
-                                    if error != nil {
-                                        print(error!)
-                                        return
-                                    }
-            DispatchQueue.main.async {
-                if let image = UIImage(data: data!) {
-                    imageCache.setObject(image, forKey: urlString as NSString)
-                    self.image = image
+            // check cached image
+            if let cachedImage = imageCache.object(forKey: urlString as NSString) as? UIImage {
+                DispatchQueue.main.async {
+                    self.image = cachedImage
                 }
+                return
             }
-        }).resume()
+            // if not, download image from url
+            URLSession.shared.dataTask(with: url,
+                                       completionHandler: { (data, _, error) in
+                                        if error != nil {
+                                            print(error!)
+                                            return
+                                        }
+                                        DispatchQueue.main.async {
+                                            if let image = UIImage(data: data!) {
+                                                imageCache.setObject(image, forKey: urlString as NSString)
+                                                self.image = image
+                                            }
+                                        }
+            }).resume()
+        }
     }
 }

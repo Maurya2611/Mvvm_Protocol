@@ -2,7 +2,6 @@
 //  MVVM-Example
 //  Created by Chandresh on 30/9/19.
 //  Copyright © 2019 Chandresh Maurya. All rights reserved.
-
 /******  To parse the JSON, add this file to your project and do:
  let baseDataModel = try BaseDataModel(json)    ******/
 

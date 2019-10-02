@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Products-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SettingsViewController" customModule="MVVM_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -25,22 +25,22 @@
                                 <rect key="frame" x="0.0" y="1" width="414" height="721"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomTableViewCell" rowHeight="120" id="i7Q-Pj-ogk" customClass="CustomTableViewCell" customModule="MVVM_Example" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="120"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomTableViewCell" rowHeight="100" id="i7Q-Pj-ogk" customClass="CustomTableViewCell" customModule="MVVM_Example" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i7Q-Pj-ogk" id="2lf-Pz-H1K">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="119.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dineHeader" translatesAutoresizingMaskIntoConstraints="NO" id="men-th-PIF">
-                                                    <rect key="frame" x="15" y="40" width="60" height="40"/>
+                                                    <rect key="frame" x="15" y="30" width="60" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="Hls-uK-8eb"/>
                                                         <constraint firstAttribute="width" constant="60" id="gLG-s6-XLw"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Wcc-pJ-wwy">
-                                                    <rect key="frame" x="90" y="37" width="300" height="46"/>
+                                                    <rect key="frame" x="90" y="27" width="300" height="46"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trz-CN-y2g">
                                                             <rect key="frame" x="0.0" y="0.0" width="300" height="20.5"/>
@@ -82,7 +82,7 @@
                             <constraint firstItem="AtH-As-W2h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rnh-sA-mQ5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="5oC-p3-Aec"/>
+                    <navigationItem key="navigationItem" title="Products" id="5oC-p3-Aec"/>
                     <connections>
                         <outlet property="tableView" destination="AtH-As-W2h" id="0C9-Eb-MmD"/>
                     </connections>

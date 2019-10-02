@@ -5,9 +5,7 @@
 //  Copyright © 2019 Chandresh Maurya. All rights reserved.
 //
 import Foundation
-
 public typealias NetworkRouterCompletion = (_ dataModel: Data?, _ response: URLResponse?, _ error: Error?) -> Void
-
 protocol NetworkRouter: class {
     associatedtype EndPoint: NetworkRouterType
     func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion)
