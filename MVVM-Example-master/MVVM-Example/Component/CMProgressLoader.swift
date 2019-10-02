@@ -122,9 +122,9 @@ public struct CMProgressLoader {
         }
         fileprivate func fadeOutAnimation() {
             DispatchQueue.main.async {
-                UIView.transition(with: self, duration: 0.50, options: .curveEaseInOut, animations: {
+                UIView.transition(with: self, duration: 0.20, options: .curveEaseInOut, animations: {
                     self.transform = CGAffineTransform(scaleX: self.fadeOutValue, y: self.fadeOutValue)
-                    self.alpha = 0.2
+                    self.alpha = 0.1
                 }, completion: { (_) in
                     self.clearView()
                 })

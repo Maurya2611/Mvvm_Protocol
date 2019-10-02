@@ -7,8 +7,8 @@
 import UIKit
 typealias BaseViewDataPresentable = TextPresentable &
     ImagePresentable & DetailTextPresentable
-/* MARK: - SwitchWithTextTableViewCell: UITableViewCell */
-class CustomTableViewCell: UITableViewCell {
+
+class CustomTableViewCell: UITableViewCell, CellReuseIdentifierabel {
     @IBOutlet weak var lblTittle: UILabel!
     @IBOutlet weak var lblSubTittle: UILabel!
     @IBOutlet weak var imageV: UIImageView!
@@ -28,9 +28,4 @@ class CustomTableViewCell: UITableViewCell {
         }
         lblSubTittle.isHidden = true
     }
-    // MARK: Actions
-   
-}
-// MARK: - SwitchWithTextTableViewCell: CellReuseIdentifierlabel -
-extension CustomTableViewCell: CellReuseIdentifierabel {
 }
