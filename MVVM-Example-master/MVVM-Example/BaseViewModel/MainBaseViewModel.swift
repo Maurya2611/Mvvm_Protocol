@@ -15,8 +15,6 @@ enum ProductType: String {
     case insurance
 }
 class MainBaseViewModel: TextPresentable, ImagePresentable, DetailTextPresentable, ApplyProductProtocol {
-    var productDepositItem: Deposits?
-    var productCreditCardItem: CreditCards?
     var productSectionArray: [String]? = []
     var productItemArray: [AnyObject]? = []
     var productIcon: String? = ""
@@ -45,17 +43,11 @@ extension MainBaseViewModel: reloadDataWithCollectionView {
                         self.productSectionArray?.append(self.baseDataModel?.deposits?.headerTitle ?? "")
                         self.productSectionArray?.append(self.baseDataModel?.loans?.headerTitle ?? "")
                         self.productSectionArray?.append(self.baseDataModel?.insurance?.headerTitle ?? "")
-                        if let crediCards = self.baseDataModel?.creditCards {
-                            self.productCreditCardItem = crediCards
-                        }
-                        if let deposits = self.baseDataModel?.deposits {
-                            self.productDepositItem = deposits
-                        }
                         self.productItemArray =
-                            [self.productCreditCardItem as CreditCards? as AnyObject? ?? [] as AnyObject,
-                             self.productDepositItem as Deposits? as AnyObject? ?? [] as AnyObject,
-                             self.productDepositItem as Deposits? as AnyObject? ?? [] as AnyObject,
-                             self.productDepositItem as Deposits? as AnyObject? ?? [] as AnyObject]
+                            [self.baseDataModel?.creditCards as AnyObject? ?? [] as AnyObject,
+                             self.baseDataModel?.deposits as AnyObject? ?? [] as AnyObject,
+                             self.baseDataModel?.loans as AnyObject? ?? [] as AnyObject,
+                             self.baseDataModel?.insurance as AnyObject? ?? [] as AnyObject]
                         self.reloadTable()
                     }
                 }
@@ -64,5 +56,44 @@ extension MainBaseViewModel: reloadDataWithCollectionView {
     }
     func startActivity() {
         CMProgressLoader.showLoading("Loading •••", disableUI: true)
+    }
+    func numberOfRows(section: Int) -> Int {
+        if self.productItemArray?[section] is CreditCards {
+            return self.baseDataModel?.creditCards?.itemList?.count ?? 0
+        } else {
+            if let deposits = self.productItemArray?[section] as? Deposits,
+                (deposits.headerTitle?.contains("Deposit Application"))! {
+                return self.baseDataModel?.deposits?.itemList?.count ?? 0
+            } else if let creditCard = self.productItemArray?[section] as? Deposits,
+                (creditCard.headerTitle?.contains("Loan Application"))! {
+                return self.baseDataModel?.loans?.itemList?.count ?? 0
+            }
+            return self.baseDataModel?.insurance?.itemList?.count ?? 0
+        }
+    }
+    func getNumberofCellWithData(index: IndexPath) {
+        if self.productItemArray?[index.section] is CreditCards {
+            if let productName = self.baseDataModel?.creditCards?.itemList?[index.row].title {
+                self.text = productName
+                self.imageName = self.baseDataModel?.creditCards?.itemList?[index.row].img
+            }
+        } else {
+            if index.section == 1 {
+                if let productName = self.baseDataModel?.deposits?.itemList?[index.row].title {
+                    self.text = productName
+                    self.imageName = self.baseDataModel?.deposits?.itemList?[index.row].img
+                }
+            } else if index.section == 2 {
+                if let productName = self.baseDataModel?.loans?.itemList?[index.row].title {
+                    self.text = productName
+                    self.imageName = self.baseDataModel?.loans?.itemList?[index.row].img
+                }
+            } else {
+                if let productName = self.baseDataModel?.insurance?.itemList?[index.row].title {
+                    self.text = productName
+                    self.imageName = self.baseDataModel?.insurance?.itemList?[index.row].img
+                }
+            }
+        }
     }
 }

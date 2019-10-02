@@ -12,8 +12,6 @@ protocol ApplyProductProtocol {
     var productName: String? { get }
     var productIcon: String? { get }
     var productSectionArray: [String]? { get }
-    var productDepositItem: Deposits? { get }
-    var productCreditCardItem: CreditCards? { get }
 }
 extension ApplyProductProtocol {
     var productName: String {
