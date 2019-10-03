@@ -5,7 +5,7 @@
 Protocol-Oriented MVVM example apps.
 
 Sample projects:
-* `MVVM-Example`  - A Settings screen that has one settings – put your app in Minion Mode!
+* `MVVM-Example`  - A list of Product screen that has Many Product – put your app Product List!
 * `MVVM-Generic`  - A Top Apps application, that presents fetched apps using generics approach.
 * `MVVM-Greeting` - A person greeting app, shows name and birthdate.
 
