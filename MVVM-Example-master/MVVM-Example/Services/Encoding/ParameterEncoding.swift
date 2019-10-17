@@ -21,15 +21,15 @@ public enum ParameterEncoding {
             switch self {
             case .urlEncoding:
                 guard let urlParameters = urlParameters else { return }
-                try URLEncoder().encode(urlRequest: &urlRequest, with: urlParameters)
+                try URLParamEncoder().encode(urlRequest: &urlRequest, with: urlParameters)
             case .jsonEncoding:
                 guard let bodyParameters = bodyParameters else { return }
-                try JSONEncoder().encode(urlRequest: &urlRequest, with: bodyParameters)
+                try JSONParamEncoder().encode(urlRequest: &urlRequest, with: bodyParameters)
             case .urlWithJsonEncoding:
                 guard let bodyParameters = bodyParameters,
                     let urlParameters = urlParameters else { return }
-                try URLEncoder().encode(urlRequest: &urlRequest, with: urlParameters)
-                try JSONEncoder().encode(urlRequest: &urlRequest, with: bodyParameters)
+                try URLParamEncoder().encode(urlRequest: &urlRequest, with: urlParameters)
+                try JSONParamEncoder().encode(urlRequest: &urlRequest, with: bodyParameters)
             }
         } catch {
             throw error
@@ -41,7 +41,7 @@ public enum NetworkError: String, Error {
     case encodingFailed = "Parameter encoding failed."
     case missingURL = "URL is nil."
 }
-public struct JSONEncoder: ParameterEncoder {
+public struct JSONParamEncoder: ParameterEncoder {
     public func encode(urlRequest: inout URLRequest, with parameters: Parameters) throws {
         do {
             let jsonAsData = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
@@ -54,7 +54,7 @@ public struct JSONEncoder: ParameterEncoder {
         }
     }
 }
-public struct URLEncoder: ParameterEncoder {
+public struct URLParamEncoder: ParameterEncoder {
     public func encode(urlRequest: inout URLRequest, with parameters: Parameters) throws {
         guard let url = urlRequest.url else { throw NetworkError.missingURL }
         if var urlComponents = URLComponents(url: url,
